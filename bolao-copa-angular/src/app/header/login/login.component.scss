@@ -1,26 +1,41 @@
-@import '../../vars';
+@import "../../vars";
 
 .login {
+  margin-top: 100px;
   width: 50%;
   height: 500px;
-  background-color: #181818;
-  color: $white;
+  background-color: $white-300;
+  color: $black-500;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px $black-shadow;
 
-  @include flex-items (center, center, column);
+  @include flex-items(center, center, column);
 
   &__txt {
     margin: 0 0 40px 0;
     text-align: center;
   }
 
-  &__title, &__subtitle {
-    color: #ff0000;
+  &__title,
+  &__subtitle {
     margin: 5px 0;
   }
 
+  &__title {
+    color: $black-400;
+    font-weight: bold;
+    font-size: 1.875rem;
+  }
+
+  &__subtitle {
+    font-weight: 300;
+    font-size: .875rem;
+    color: $black-100;
+  }
+
   &__group-input {
-    width: 70%;
-    @include flex-items (center, center, column);
+    width: 80%;
+    @include flex-items(center, center, column);
   }
 
   &__item {
@@ -30,8 +45,35 @@
   }
 
   &__input {
-    width: 100%;
+    min-width: 98%;
     height: 40px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+
+    padding-left: 8px;
+  }
+
+  &__bnt-submit {
+    width: 30%;
+    height: 35px;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    background-color: $blue-500;
+    color: $white-500;
+    text-transform: uppercase;
+    font-weight: 400;
+    transition: .8s;
+
+    &:hover {
+      background-color: $blue-300;
+      color: $white-100;
+    }
+
   }
 
   &__divider {
@@ -40,9 +82,19 @@
 
     border: none;
     border-radius: 50%;
-    background-color: $white;
+    background-color: $white-100;
 
     margin: 35px 0;
   }
 
+  &__cadastro {
+    text-decoration: none;
+    color: $black-500;
+    font-weight: 300;
+    transition: .5s;
+
+    &:hover {
+      color: $blue-300;
+    }
+  }
 }
